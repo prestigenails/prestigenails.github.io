@@ -1,56 +1,64 @@
-# _config.yml
+# _config.yml with navigation from YAML
 
 # Site settings
-title: "Vahid Moeinifar - Personal Website"
-email: "vahidmoeini1988@gmail.com"
-description: "Qt QML Developer | .NET Developer | PhD Candidate at AGH University"
+title: "Prestige Nails Salon"
+name: "Prestige Nails"
+email: "prestigenailsbyolga11@gmail.com" 
+description: "Professional nail care services in Krakow"
 baseurl: "" # Leave empty for username.github.io
-url: "https://vahidmoeinifar.github.io"
+url: "https://prestigenails.github.io"
 
-# Author
-author:
-  name: "Vahid Moeinifar"
-  email: "vahidmoeini1988@gmail.com"
-  
-# Social
-github_username: vahidmoeinifar
-linkedin_username: vahid-moeinifar-63219245
+# Salon information
+salon:
+  name: "Prestige Nails"
+  phone: "+48 571 851 417"
+  address: "Beautiful Street 123, Krakow, Poland"
+  working_hours: "Mon-Fri: 9:00-19:00, Sat: 10:00-16:00"
+  appointment_by_phone: true
 
+# Languages
+languages:
+  - code: "en"
+    name: "English"
+    flag: "/assets/flags/en.svg"
+  - code: "pl"
+    name: "Polski"
+    flag: "/assets/flags/pl.svg"
+  - code: "uk"
+    name: "Українська"
+    flag: "/assets/flags/uk.svg"
+  - code: "ru"
+    name: "Русский"
+    flag: "/assets/flags/ru.svg"
+  - code: "tr"
+    name: "Türkçe"
+    flag: "/assets/flags/tr.svg"
+default_lang: "en"
 
-
-# Navigation links - FIXED URLs (no trailing slashes)
-nav_links:
+# Navigation from YAML - with icons
+navigation:
   - title: "Home"
-    url: "/"
+    url: "#home"
     icon: "fas fa-home"
-  - title: "About"
-    url: "#about"
-    icon: "fas fa-user"
-  - title: "Projects"
-    url: "#projects"
-    icon: "fas fa-code"
-  - title: "Resume"
-    url: "#cv"
-    icon: "fas fa-file-alt"
-  - title: "PhD Studies"
-    url: "phd.html"
-    icon: "fas fa-graduation-cap"
-  - title: "My Books"
-    url: "my-books.html"
-    icon: "fas fa-book"
+  - title: "Services"
+    url: "#services"
+    icon: "fas fa-hand-sparkles"
+  - title: "Gallery"
+    url: "#gallery"
+    icon: "fas fa-images"
+  - title: "Prices"
+    url: "#prices"
+    icon: "fas fa-tag"
   - title: "Contact"
     url: "#contact"
-    icon: "fas fa-envelope"
-  - title: "Fork This Site"
-    url: "https://github.com/vahidmoeinifar/vahidmoeinifar.github.io"
-    icon: "fas fa-code-branch"
-    external: true
-    class: "fork-link"
+    icon: "fas fa-phone-alt"
+  - title: "Book Now"
+    url: "tel:+48123456789"
+    icon: "fas fa-calendar-check"
+    class: "book-btn"
+
 # Build settings
 markdown: kramdown
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
 theme: null
 
 # Exclude from processing

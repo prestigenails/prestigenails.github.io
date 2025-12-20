@@ -1,0 +1,426 @@
+# Complete language file with all translations
+
+# ENGLISH
+en:
+  # Navigation
+  nav:
+    home: "Home"
+    about: "About"
+    services: "Services"
+    gallery: "Gallery"
+    prices: "Prices"
+    contact: "Contact"
+    book_now: "Book Now"
+  
+  # Hero Section
+  hero:
+    welcome: "Welcome to"
+    title: "Prestige Nails"
+    subtitle: "Your Nails, Your Story!"
+    description: "Experience premium nail services in a relaxing atmosphere. Our skilled technicians provide meticulous care using the highest quality products."
+    call_to_action: "Book Appointment"
+    call_phone: "Call Now"
+  
+  # Services
+  services:
+    title: "Our Services"
+    manicure: "Manicure"
+    manicure_desc: "Basic nail care, shaping, and cuticle treatment"
+    pedicure: "Pedicure"
+    pedicure_desc: "Foot care and nail treatment"
+    nail_art: "Nail Art"
+    nail_art_desc: "Creative designs and decorations"
+    gel_nails: "Gel Nails"
+    gel_nails_desc: "Long-lasting gel extensions"
+    spa_treatment: "Spa Treatment"
+    spa_treatment_desc: "Relaxing hand and foot spa"
+  
+  # Gallery
+  gallery:
+    title: "Our Gallery"
+    subtitle: "See Our Beautiful Work"
+    view_all: "View All Photos"
+  
+  # Prices
+  prices:
+    title: "Price List (PLN)"
+    manicure_price: "from 60 PLN"
+    pedicure_price: "from 80 PLN"
+    nail_art_price: "from 30 PLN"
+    gel_nails_price: "from 120 PLN"
+    spa_price: "from 100 PLN"
+    full_set: "Full Set"
+    refill: "Refill"
+    removal: "Removal"
+  
+  # About
+  about:
+    title: "About Our Salon"
+    content: "Our salon combines expertise with a passion for beauty. We use only premium products and follow strict hygiene standards to ensure your safety and satisfaction."
+  
+  # Contact
+  contact:
+    title: "Contact Us"
+    address_title: "Address"
+    hours_title: "Working Hours"
+    phone_title: "Phone"
+    appointment_title: "Appointments"
+    appointment_info: "Appointments by phone only"
+    call_now: "Call to Book"
+    same_day: "Same-day appointments available"
+  
+  # Footer
+  footer:
+    tagline: "Professional nail care in a relaxing atmosphere"
+    quick_links: "Quick Links"
+    hours: "Working Hours"
+    follow_us: "Follow Us"
+    rights: "All rights reserved"
+    made_with: "Made with"
+    heart: "love"
+    for: "for our clients"
+    contact_us: "Contact Us"
+    address: "Address"
+    phone: "Phone"
+    email: "Email"
+    Developer: VaMo
+
+# POLISH
+pl:
+  # Navigation
+  nav:
+    home: "Strona Główna"
+    about: "O Nas"
+    services: "Usługi"
+    gallery: "Galeria"
+    prices: "Cennik"
+    contact: "Kontakt"
+    book_now: "Umów Wizytę"
+  
+  # Hero Section
+  hero:
+    welcome: "Witamy w"
+    title: "Prestige Nails"
+    subtitle: "Twoje Paznokcie, Twoja Historia!"
+    description: "Doświadcz premium usług paznokci w relaksującej atmosferze. Nasi wykwalifikowani technicy zapewniają staranną opiekę przy użyciu najwyższej jakości produktów."
+    call_to_action: "Umów Wizytę"
+    call_phone: "Zadzwoń Teraz"
+  
+  # Services
+  services:
+    title: "Nasze Usługi"
+    manicure: "Manicure"
+    manicure_desc: "Podstawowa pielęgnacja, kształtowanie i pielęgnacja skórek"
+    pedicure: "Pedicure"
+    pedicure_desc: "Pielęgnacja stóp i paznokci"
+    nail_art: "Nail Art"
+    nail_art_desc: "Kreatywne wzory i dekoracje"
+    gel_nails: "Żelowe Paznokcie"
+    gel_nails_desc: "Trwałe przedłużenia żelowe"
+    spa_treatment: "Zabieg Spa"
+    spa_treatment_desc: "Relaksujące spa dłoni i stóp"
+  
+  # Gallery
+  gallery:
+    title: "Nasza Galeria"
+    subtitle: "Zobacz Nasze Piękne Prace"
+    view_all: "Zobacz Wszystkie Zdjęcia"
+  
+  # Prices
+  prices:
+    title: "Cennik (PLN)"
+    manicure_price: "od 60 PLN"
+    pedicure_price: "od 80 PLN"
+    nail_art_price: "od 30 PLN"
+    gel_nails_price: "od 120 PLN"
+    spa_price: "od 100 PLN"
+    full_set: "Pełny zestaw"
+    refill: "Uzupełnienie"
+    removal: "Usunięcie"
+  
+  # About
+  about:
+    title: "O Naszym Salonie"
+    content: "Nasz salon łączy ekspertyzę z pasją do piękna. Używamy tylko premium produktów i przestrzegamy ścisłych standardów higieny, aby zapewnić Twoje bezpieczeństwo i satysfakcję."
+  
+  # Contact
+  contact:
+    title: "Kontakt"
+    address_title: "Adres"
+    hours_title: "Godziny Otwarcia"
+    phone_title: "Telefon"
+    appointment_title: "Rezerwacje"
+    appointment_info: "Rezerwacja tylko telefonicznie"
+    call_now: "Zadzwoń, aby zarezerwować"
+    same_day: "Rezerwacje w dniu wizyty dostępne"
+  
+  # Footer
+  footer:
+    tagline: "Profesjonalna pielęgnacja paznokci w relaksującej atmosferze"
+    quick_links: "Szybkie Linki"
+    hours: "Godziny Pracy"
+    follow_us: "Obserwuj Nas"
+    rights: "Wszelkie prawa zastrzeżone"
+    made_with: "Stworzone z"
+    heart: "miłością"
+    for: "dla naszych klientów"
+    contact_us: "Skontaktuj się z nami"
+    address: "Adres"
+    phone: "Telefon"
+    email: "Email"
+    Developer: VaMo
+
+# UKRAINIAN
+uk:
+  # Navigation
+  nav:
+    home: "Головна"
+    about: "Про нас"
+    services: "Послуги"
+    gallery: "Галерея"
+    prices: "Ціни"
+    contact: "Контакти"
+    book_now: "Записатися"
+  
+  # Hero Section
+  hero:
+    welcome: "Ласкаво просимо до"
+    title: "Prestige Nails"
+    subtitle: "Ваші Нігті, Ваша Історія!"
+    description: "Отримайте преміум послуги з манікюру в затишній атмосфері. Наші досвідчені техніки надають ретельний догляд з використанням найякісніших продуктів."
+    call_to_action: "Записатися"
+    call_phone: "Зателефонувати"
+  
+  # Services
+  services:
+    title: "Наші Послуги"
+    manicure: "Манікюр"
+    manicure_desc: "Базовий догляд за нігтями, форма та обробка кутикули"
+    pedicure: "Педикюр"
+    pedicure_desc: "Догляд за ступнями та нігтями"
+    nail_art: "Нейл-арт"
+    nail_art_desc: "Креативні дизайни та прикраси"
+    gel_nails: "Гелеві Нігті"
+    gel_nails_desc: "Довготривалі гелеві нарощення"
+    spa_treatment: "Спа-процедури"
+    spa_treatment_desc: "Розслаблюючі спа для рук і ніг"
+  
+  # Gallery
+  gallery:
+    title: "Наша Галерея"
+    subtitle: "Подивіться на наші красиві роботи"
+    view_all: "Переглянути всі фото"
+  
+  # Prices
+  prices:
+    title: "Прайс-лист (PLN)"
+    manicure_price: "від 60 PLN"
+    pedicure_price: "від 80 PLN"
+    nail_art_price: "від 30 PLN"
+    gel_nails_price: "від 120 PLN"
+    spa_price: "від 100 PLN"
+    full_set: "Повний набір"
+    refill: "Корекція"
+    removal: "Зняття"
+  
+  # About
+  about:
+    title: "Про Наш Салон"
+    content: "Наш салон поєднує експертизу з пристрастю до краси. Ми використовуємо лише преміум продукти та дотримуємося суворих стандартів гігієни, щоб забезпечити вашу безпеку та задоволення."
+  
+  # Contact
+  contact:
+    title: "Контакти"
+    address_title: "Адреса"
+    hours_title: "Години Роботи"
+    phone_title: "Телефон"
+    appointment_title: "Запис"
+    appointment_info: "Запис тільки за телефоном"
+    call_now: "Зателефонувати для запису"
+    same_day: "Прийом в той же день доступний"
+  
+  # Footer
+  footer:
+    tagline: "Професійний догляд за нігтями в затишній атмосфері"
+    quick_links: "Швидкі Посилання"
+    hours: "Години Роботи"
+    follow_us: "Слідкуйте за нами"
+    rights: "Всі права захищені"
+    made_with: "Зроблено з"
+    heart: "любов'ю"
+    for: "для наших клієнтів"
+    contact_us: "Зв'яжіться з нами"
+    address: "Адреса"
+    phone: "Телефон"
+    email: "Електронна пошта"
+    Developer: VaMo
+
+# RUSSIAN
+ru:
+  # Navigation
+  nav:
+    home: "Главная"
+    about: "О нас"
+    services: "Услуги"
+    gallery: "Галерея"
+    prices: "Цены"
+    contact: "Контакты"
+    book_now: "Записаться"
+  
+  # Hero Section
+  hero:
+    welcome: "Добро пожаловать в"
+    title: "Prestige Nails"
+    subtitle: "Ваши Ногти, Ваша История!"
+    description: "Получите премиум услуги маникюра в уютной атмосфере. Наши опытные техники обеспечивают тщательный уход с использованием продуктов высшего качества."
+    call_to_action: "Записаться"
+    call_phone: "Позвонить"
+  
+  # Services
+  services:
+    title: "Наши Услуги"
+    manicure: "Маникюр"
+    manicure_desc: "Базовый уход за ногтями, форма и обработка кутикулы"
+    pedicure: "Педикюр"
+    pedicure_desc: "Уход за стопами и ногтями"
+    nail_art: "Нейл-арт"
+    nail_art_desc: "Креативные дизайны и украшения"
+    gel_nails: "Гелевые Ногти"
+    gel_nails_desc: "Долговременные гелевые наращивания"
+    spa_treatment: "Спа-процедуры"
+    spa_treatment_desc: "Расслабляющие спа для рук и ног"
+  
+  # Gallery
+  gallery:
+    title: "Наша Галерея"
+    subtitle: "Посмотрите наши красивые работы"
+    view_all: "Посмотреть все фото"
+  
+  # Prices
+  prices:
+    title: "Прайс-лист (PLN)"
+    manicure_price: "от 60 PLN"
+    pedicure_price: "от 80 PLN"
+    nail_art_price: "от 30 PLN"
+    gel_nails_price: "от 120 PLN"
+    spa_price: "от 100 PLN"
+    full_set: "Полный набор"
+    refill: "Коррекция"
+    removal: "Снятие"
+  
+  # About
+  about:
+    title: "О Нашем Сало"
+    content: "Наш салон сочетает экспертизу со страстью к красоте. Мы используем только премиум продукты и соблюдаем строгие стандарты гигиены, чтобы обеспечить вашу безопасность и удовлетворение."
+  
+  # Contact
+  contact:
+    title: "Контакты"
+    address_title: "Адрес"
+    hours_title: "Часы Работы"
+    phone_title: "Телефон"
+    appointment_title: "Запись"
+    appointment_info: "Запись только по телефону"
+    call_now: "Позвонить для записи"
+    same_day: "Прием в тот же день доступен"
+  
+  # Footer
+  footer:
+    tagline: "Профессиональный уход за ногтями в уютной атмосфере"
+    quick_links: "Быстрые Ссылки"
+    hours: "Часы Работы"
+    follow_us: "Следите за нами"
+    rights: "Все права защищены"
+    made_with: "Сделано с"
+    heart: "любовью"
+    for: "для наших клиентов"
+    contact_us: "Свяжитесь с нами"
+    address: "Адрес"
+    phone: "Телефон"
+    email: "Электронная почта"
+    Developer: VaMo
+
+# TURKISH
+tr:
+  # Navigation
+  nav:
+    home: "Ana Sayfa"
+    about: "Hakkımızda"
+    services: "Hizmetler"
+    gallery: "Galeri"
+    prices: "Fiyatlar"
+    contact: "İletişim"
+    book_now: "Randevu Al"
+  
+  # Hero Section
+  hero:
+    welcome: "Hoş Geldiniz"
+    title: "Prestige Nails"
+    subtitle: "Tırnaklarınız, Hikayeniz!"
+    description: "Rahatlatıcı bir atmosferde premium tırnak hizmetlerinin keyfini çıkarın. Uzman teknisyenlerimiz, en yüksek kalitede ürünler kullanarak titiz bir bakım sağlar."
+    call_to_action: "Randevu Al"
+    call_phone: "Hemen Ara"
+  
+  # Services
+  services:
+    title: "Hizmetlerimiz"
+    manicure: "Manikür"
+    manicure_desc: "Temel tırnak bakımı, şekillendirme ve kutikül tedavisi"
+    pedicure: "Pedicure"
+    pedicure_desc: "Ayak bakımı ve tırnak tedavisi"
+    nail_art: "Tırnak Sanatı"
+    nail_art_desc: "Yaratıcı tasarımlar ve süslemeler"
+    gel_nails: "Jel Tırnaklar"
+    gel_nails_desc: "Uzun ömürlü jel uzantılar"
+    spa_treatment: "Spa Tedavisi"
+    spa_treatment_desc: "Rahatlatıcı el ve ayak spa'ı"
+  
+  # Gallery
+  gallery:
+    title: "Galerimiz"
+    subtitle: "Güzel Çalışmalarımızı Görün"
+    view_all: "Tüm Fotoğrafları Gör"
+  
+  # Prices
+  prices:
+    title: "Fiyat Listesi (PLN)"
+    manicure_price: "60 PLN'den başlayan"
+    pedicure_price: "80 PLN'den başlayan"
+    nail_art_price: "30 PLN'den başlayan"
+    gel_nails_price: "120 PLN'den başlayan"
+    spa_price: "100 PLN'den başlayan"
+    full_set: "Tam Set"
+    refill: "Dolgu"
+    removal: "Çıkarma"
+  
+  # About
+  about:
+    title: "Salonumuz Hakkında"
+    content: "Salonumuz, uzmanlığı güzellik tutkusuyla birleştirir. Güvenliğiniz ve memnuniyetiniz için yalnızca premium ürünler kullanır ve katı hijyen standartlarını takip ederiz."
+  
+  # Contact
+  contact:
+    title: "İletişim"
+    address_title: "Adres"
+    hours_title: "Çalışma Saatleri"
+    phone_title: "Telefon"
+    appointment_title: "Randevular"
+    appointment_info: "Randevular sadece telefonla"
+    call_now: "Randevu için Ara"
+    same_day: "Aynı gün randevular mevcut"
+  
+  # Footer
+  footer:
+    tagline: "Rahatlatıcı bir atmosferde profesyonel tırnak bakımı"
+    quick_links: "Hızlı Bağlantılar"
+    hours: "Çalışma Saatleri"
+    follow_us: "Bizi Takip Edin"
+    rights: "Tüm hakları saklıdır"
+    made_with: "Sevgiyle yapıldı"
+    heart: "aşk"
+    for: "müşterilerimiz için"
+    contact_us: "Bize Ulaşın"
+    address: "Adres"
+    phone: "Telefon"
+    email: "E-posta"
+    Developer: VaMo

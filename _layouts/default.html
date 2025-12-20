@@ -1,37 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: site.default_lang }}">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Full-Stack & Qt/QML Software Engineer, PhD researcher, and published author. Specializing in modern web development and desktop applications.{% endif %}">
-    <meta name="keywords" content="Vahid Moeinifar, software engineer, full-stack developer, Qt/QML, C++, .NET, React, PhD researcher, computer science">
-    <meta name="author" content="Vahid Moeinifar">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} | Vahid Moeinifar{% else %}Vahid Moeinifar - Full-Stack & Qt/QML Developer{% endif %}">
-    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Full-Stack & Qt/QML Software Engineer, PhD researcher, and published author.{% endif %}">
-    <meta property="og:image" content="{{ site.url }}/assets/images/og-image.jpg">
-     <!-- Additional SEO -->
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | {{ site.title }}</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
     
-    <!-- CSS & Fonts -->
+    <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Emergency mobile fix -->
-    <style>
-        /* Temporary debug border to see viewport */
-        body.debug * { border: 1px solid rgba(255,0,0,0.1); }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
     
     {% include head.html %}
 </head>
@@ -44,39 +26,6 @@
     
     {% include footer.html %}
     
-    <script src="{{ '/script.js' | relative_url }}"></script>
-    
-    <!-- Emergency JavaScript to fix mobile -->
-    <script>
-    // Force mobile viewport fix
-    document.addEventListener('DOMContentLoaded', function() {
-        // Prevent horizontal scroll
-        document.body.style.overflowX = 'hidden';
-        
-        // Fix for iOS
-        if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
-            document.body.style.webkitOverflowScrolling = 'touch';
-        }
-        
-        // Debug: Log viewport info
-        console.log('Viewport width:', window.innerWidth);
-        console.log('Document width:', document.documentElement.clientWidth);
-        console.log('Body width:', document.body.clientWidth);
-        
-        // Add debug class if URL has debug parameter
-        if (window.location.search.includes('debug')) {
-            document.body.classList.add('debug');
-        }
-    });
-    
-    // Prevent zoom on double tap (iOS)
-    document.addEventListener('touchstart', function(event) {
-        if (event.touches.length > 1) {
-            event.preventDefault();
-        }
-    }, { passive: false });
-    </script>
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 </body>
 </html>
-
-

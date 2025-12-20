@@ -1,9 +1,3 @@
----
-layout: default
-title: Home
-lang: en
----
-
 <!-- Hero Section -->
 <section id="home" class="hero">
     <div class="container">
@@ -27,7 +21,7 @@ lang: en
                     <img src="{{ '/assets/images/profile2.png' | relative_url }}" alt="Salon Owner" class="owner-img">
                     <div class="owner-badge">
                         <i class="fas fa-crown"></i>
-                        <span>Owner & Master Nail Technician</span>
+                        <span>{% if page.lang == 'pl' %}Właściciel & Mistrz Manicure{% elsif page.lang == 'uk' %}Власник & Майстер манікюру{% elsif page.lang == 'ru' %}Владелец & Мастер маникюра{% elsif page.lang == 'tr' %}Sahip & Usta Tırnak Teknisyeni{% else %}Owner & Master Nail Technician{% endif %}</span>
                     </div>
                 </div>
             </div>
@@ -87,7 +81,87 @@ lang: en
         </div>
     </div>
 </section>
-
+<!-- Gallery Section -->
+<section id="gallery" class="section">
+    <div class="container">
+        <h2 class="section-title">{{ site.data.languages[page.lang].gallery.title }}</h2>
+        <p class="gallery-subtitle">{{ site.data.languages[page.lang].gallery.subtitle }}</p>
+        
+        <div class="gallery-grid">
+            <!-- Image 1 -->
+            <div class="gallery-item">
+                <img src="/assets/images/sample1.png" alt="Nail Design 1">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h4>French Manicure</h4>
+                        <p>Classic & Elegant</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 2 -->
+            <div class="gallery-item">
+                <img src="/assets/images/sample2.png" alt="Nail Design 2">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h4>Sparkle Nails</h4>
+                        <p>Festive Design</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 3 -->
+            <div class="gallery-item">
+                <img src="/assets/images/sample3.png" alt="Nail Design 3">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h4>Gel Extensions</h4>
+                        <p>Long & Strong</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 4 -->
+            <div class="gallery-item">
+                <img src="/assets/images/sample4.png" alt="Nail Design 4">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h4>Nail Art</h4>
+                        <p>Creative Designs</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 5 -->
+            <div class="gallery-item">
+                <img src="/assets/images/sample5.png" alt="Nail Design 5">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h4>Bridal Nails</h4>
+                        <p>Wedding Special</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 6 -->
+            <div class="gallery-item">
+                <img src="/assets/images/sample6.png" alt="Nail Design 6">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h4>Seasonal Colors</h4>
+                        <p>Trendy Shades</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gallery-cta">
+            <a href="#contact" class="btn btn-secondary">
+                <i class="fas fa-camera"></i> {{ site.data.languages[page.lang].gallery.view_all }}
+            </a>
+        </div>
+    </div>
+</section>
 <!-- Prices Section -->
 <section id="prices" class="section dark-section">
     <div class="container">
@@ -106,7 +180,7 @@ lang: en
                         <td>{{ site.data.languages[page.lang].prices.pedicure_price }}</td>
                     </tr>
                     <tr>
-                        <td>{{ site.data.languages[page.lang].services.nail_art }} (Basic)</td>
+                        <td>{{ site.data.languages[page.lang].services.nail_art }} ({% if page.lang == 'pl' %}Podstawowy{% elsif page.lang == 'uk' %}Базовий{% elsif page.lang == 'ru' %}Базовый{% elsif page.lang == 'tr' %}Temel{% else %}Basic{% endif %})</td>
                         <td>{{ site.data.languages[page.lang].prices.nail_art_price }}</td>
                     </tr>
                     <tr>
@@ -136,19 +210,19 @@ lang: en
                 <div class="about-features">
                     <div class="feature">
                         <i class="fas fa-check-circle"></i>
-                        <span>Premium Quality Products</span>
+                        <span>{% if page.lang == 'pl' %}Produkty Premium Quality{% elsif page.lang == 'uk' %}Преміум якості продукти{% elsif page.lang == 'ru' %}Продукты Премиум качества{% elsif page.lang == 'tr' %}Premium Kalite Ürünler{% else %}Premium Quality Products{% endif %}</span>
                     </div>
                     <div class="feature">
                         <i class="fas fa-check-circle"></i>
-                        <span>Sterilized Equipment</span>
+                        <span>{% if page.lang == 'pl' %}Sterylizowany Sprzęt{% elsif page.lang == 'uk' %}Стерилізоване обладнання{% elsif page.lang == 'ru' %}Стерилизованное оборудование{% elsif page.lang == 'tr' %}Sterilize Ekipmanlar{% else %}Sterilized Equipment{% endif %}</span>
                     </div>
                     <div class="feature">
                         <i class="fas fa-check-circle"></i>
-                        <span>Experienced Technicians</span>
+                        <span>{% if page.lang == 'pl' %}Doświadczeni Technicy{% elsif page.lang == 'uk' %}Досвідчені техніки{% elsif page.lang == 'ru' %}Опытные техники{% elsif page.lang == 'tr' %}Deneyimli Teknisyenler{% else %}Experienced Technicians{% endif %}</span>
                     </div>
                     <div class="feature">
                         <i class="fas fa-check-circle"></i>
-                        <span>Hygiene Certified</span>
+                        <span>{% if page.lang == 'pl' %}Certyfikat Higieny{% elsif page.lang == 'uk' %}Сертифікат гігієни{% elsif page.lang == 'ru' %}Сертификат гигиены{% elsif page.lang == 'tr' %}Hijyen Sertifikalı{% else %}Hygiene Certified{% endif %}</span>
                     </div>
                 </div>
             </div>
@@ -196,7 +270,7 @@ lang: en
                 </a>
                 <div class="emergency-note">
                     <i class="fas fa-exclamation-circle"></i>
-                    <span>Same-day appointments available</span>
+                    <span>{% if page.lang == 'pl' %}Wizyty w tym samym dniu dostępne{% elsif page.lang == 'uk' %}Прийом в той же день доступний{% elsif page.lang == 'ru' %}Прием в тот же день доступен{% elsif page.lang == 'tr' %}Aynı gün randevular mevcut{% else %}Same-day appointments available{% endif %}</span>
                 </div>
             </div>
         </div>

@@ -1,15 +1,88 @@
-  <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Vahid Moeinifar. All rights reserved.</p>
-            <p>Built with <i class="fas fa-heart"></i> and hosted on GitHub Pages</p>
-            <div class="footer-links">
-                <div class="nav-links">
-    {% for link in site.nav_links %}  <!-- ← Reads from _config.yml -->
-        <a href="{{ link.url | relative_url }}">
-            <i class="{{ link.icon }}"></i> {{ link.title }}
-        </a>
-    {% endfor %}
-</div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <!-- Footer Logo & Info -->
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <i class="fas fa-spa"></i>
+                    <span>{{ site.name }}</span>
+                </div>
+                <p class="footer-description">{{ site.data.languages[page.lang].footer.tagline }}</p>
+                <div class="footer-contact">
+                    <a href="tel:{{ site.salon.phone }}">
+                        <i class="fas fa-phone"></i> {{ site.salon.phone }}
+                    </a>
+                    <a href="mailto:{{ site.email }}">
+                        <i class="fas fa-envelope"></i> {{ site.email }}
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="footer-links-section">
+                <h4>{{ site.data.languages[page.lang].footer.quick_links }}</h4>
+                <div class="footer-links-grid">
+                    {% for link in site.navigation %}
+                        {% unless link.class == "book-btn" %}
+                            {% assign link_key = link.title | downcase | replace: ' ', '_' %}
+                            {% capture translated_title %}{% if link_key == 'home' %}{{ site.data.languages[page.lang].nav.home }}{% elsif link_key == 'about' %}{{ site.data.languages[page.lang].nav.about }}{% elsif link_key == 'services' %}{{ site.data.languages[page.lang].nav.services }}{% elsif link_key == 'gallery' %}{{ site.data.languages[page.lang].nav.gallery }}{% elsif link_key == 'prices' %}{{ site.data.languages[page.lang].nav.prices }}{% elsif link_key == 'contact' %}{{ site.data.languages[page.lang].nav.contact }}{% else %}{{ link.title }}{% endif %}{% endcapture %}
+                            
+                            <a href="{{ link.url }}">
+                                <i class="{{ link.icon }}"></i> {{ translated_title }}
+                            </a>
+                        {% endunless %}
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <!-- Hours & Social -->
+            <div class="footer-hours-social">
+                <div class="footer-hours">
+                    <h4>{{ site.data.languages[page.lang].footer.hours }}</h4>
+                    <p>{{ site.salon.working_hours }}</p>
+                </div>
+                <div class="footer-social">
+                    <h4>{{ site.data.languages[page.lang].footer.follow_us }}</h4>
+                    <div class="social-icons-footer">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+    <p>&copy; <span id="current-year">{{ 'now' | date: "%Y" }}</span> {{ site.name }}. {{ site.data.languages[page.lang].footer.rights }}</p>
+    
+    <div class="footer-creator">
+        <div class="creator-info">
+            <span class="made-with-text">
+                {{ site.data.languages[page.lang].footer.made_with }} 
+                <i class="fas fa-heart heart-icon"></i> 
+                {{ site.data.languages[page.lang].footer.heart }} 
+                {{ site.data.languages[page.lang].footer.for }}
+            </span>
+            
+            <span class="separator">|</span>
+            
+            <div class="developer-link">
+                <span class="developed-by">{{ site.data.languages[page.lang].footer.developed_by }}</span>
+                <a href="https://vahidmoeinifar.github.io/" target="_blank" class="developer-name">
+                    <i class="fas fa-code"></i> VaMo
+                </a>
+            </div>
+            
+            <span class="separator">|</span>
+            
+            <a href="https://github.com/vahidmoeinifar/vahidmoeinifar.github.io" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> 
+                <span>{{ site.data.languages[page.lang].footer.fork_on_github }}</span>
+            </a>
+        </div>
+    </div>
+</div>
+    </div>
+</footer>

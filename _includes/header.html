@@ -1,18 +1,112 @@
+<!-- _includes/header.html - Complete with YAML navigation and language dropdown -->
 <nav class="navbar">
     <div class="nav-container">
+        <a href="{{ '/' | relative_url }}" class="logo">
+            <i class="fas fa-spa"></i> {{ site.name }}
+        </a>
         
+        <div class="nav-links">
+            {% comment %} Check if navigation exists {% endcomment %}
+            {% if site.navigation %}
+                {% for link in site.navigation %}
+                    {% comment %} Get translated title {% endcomment %}
+                    {% assign link_title = link.title %}
+                    {% assign link_lower = link.title | downcase %}
+                    
+                    {% comment %} Translate based on link title {% endcomment %}
+                    {% case link_lower %}
+                        {% when 'home' %}
+                            {% assign translated_title = site.data.languages[page.lang].nav.home %}
+                        {% when 'about' %}
+                            {% assign translated_title = site.data.languages[page.lang].nav.about %}
+                        {% when 'services' %}
+                            {% assign translated_title = site.data.languages[page.lang].nav.services %}
+                        {% when 'gallery' %}
+                            {% assign translated_title = site.data.languages[page.lang].nav.gallery %}
+                        {% when 'prices' %}
+                            {% assign translated_title = site.data.languages[page.lang].nav.prices %}
+                        {% when 'contact' %}
+                            {% assign translated_title = site.data.languages[page.lang].nav.contact %}
+                        {% when 'book now' %}
+                            {% assign translated_title = site.data.languages[page.lang].nav.book_now %}
+                        {% else %}
+                            {% assign translated_title = link.title %}
+                    {% endcase %}
+                    
+                    {% comment %} Render link {% endcomment %}
+                    {% if link.class == "book-btn" %}
+                        <a href="{{ link.url }}" class="{{ link.class }}">
+                            <i class="{{ link.icon }}"></i> {{ translated_title }}
+                        </a>
+                    {% else %}
+                        <a href="{{ link.url }}">
+                            <i class="{{ link.icon }}"></i> {{ translated_title }}
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                {% comment %} Fallback if navigation not defined in YAML {% endcomment %}
+                <a href="#home">
+                    <i class="fas fa-home"></i> {{ site.data.languages[page.lang].nav.home }}
+                </a>
+                <a href="#about">
+                    <i class="fas fa-spa"></i> {{ site.data.languages[page.lang].nav.about }}
+                </a>
+                <a href="#services">
+                    <i class="fas fa-hand-sparkles"></i> {{ site.data.languages[page.lang].nav.services }}
+                </a>
+                <a href="#gallery">
+                    <i class="fas fa-images"></i> {{ site.data.languages[page.lang].nav.gallery }}
+                </a>
+                <a href="#prices">
+                    <i class="fas fa-tag"></i> {{ site.data.languages[page.lang].nav.prices }}
+                </a>
+                <a href="#contact">
+                    <i class="fas fa-phone-alt"></i> {{ site.data.languages[page.lang].nav.contact }}
+                </a>
+                <a href="tel:{{ site.salon.phone }}" class="book-btn">
+                    <i class="fas fa-calendar-check"></i> {{ site.data.languages[page.lang].nav.book_now }}
+                </a>
+            {% endif %}
+        </div>
         
-<div class="nav-links">
-   {% for link in site.nav_links %}
-<a href="{{ link.url | relative_url }}">
-    <i class="{{ link.icon }}"></i> {{ link.title }}
-</a>
-{% endfor %}
-</div>
+        <!-- Language Switcher Dropdown -->
+        <div class="language-switcher">
+            <button class="language-btn" id="languageToggle">
+                {% comment %} Get current language info {% endcomment %}
+                {% for lang in site.languages %}
+                    {% if lang.code == page.lang %}
+                        {% if lang.flag %}
+                            {% if lang.flag contains '.svg' or lang.flag contains '.png' or lang.flag contains '.jpg' %}
+                                <img src="{{ lang.flag | relative_url }}" alt="{{ lang.name }}" class="flag-icon">
+                            {% else %}
+                                <span class="flag-emoji">{{ lang.flag }}</span>
+                            {% endif %}
+                        {% endif %}
+                        {% break %}
+                    {% endif %}
+                {% endfor %}
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            
+            <div class="language-dropdown" id="languageDropdown">
+                {% for lang in site.languages %}
+                    {% if lang.code != page.lang %}
+                        <a href="/{{ lang.code }}/" class="language-option">
+                            {% if lang.flag %}
+                                {% if lang.flag contains '.svg' or lang.flag contains '.png' or lang.flag contains '.jpg' %}
+                                    <img src="{{ lang.flag | relative_url }}" alt="{{ lang.name }}" class="flag-icon">
+                                {% else %}
+                                    <span class="flag-emoji">{{ lang.flag }}</span>
+                                {% endif %}
+                            {% endif %}
+                            <span class="language-name">{{ lang.name }}</span>
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
         
-        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
-            <i class="fas fa-moon"></i>
-        </button>
         <button class="menu-toggle" id="menuToggle">
             <i class="fas fa-bars"></i>
         </button>
