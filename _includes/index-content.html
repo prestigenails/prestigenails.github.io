@@ -30,59 +30,30 @@
 </section>
 
 <!-- Services Section -->
-<section id="services" class="section">
+<!-- Updated Services Section with YAML array -->
+<section id="services" class="services-section">
     <div class="container">
         <h2 class="section-title">{{ site.data.languages[page.lang].services.title }}</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-hand-sparkles"></i>
+        
+        <div class="services-compact">
+            {% for service in site.data.languages[page.lang].services.list %}
+            <div class="service-item-compact">
+                <div class="service-header-compact">
+                    <h3>{{ service.name }}</h3>
+                    <span class="service-duration">{{ service.time }}</span>
                 </div>
-                <h3>{{ site.data.languages[page.lang].services.manicure }}</h3>
-                <p>{{ site.data.languages[page.lang].services.manicure_desc }}</p>
-                <span class="service-price">{{ site.data.languages[page.lang].prices.manicure_price }}</span>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-walking"></i>
+                <p class="service-desc">{{ service.description }}</p>
+                <div class="service-footer">
+                    <span class="service-price">{{ service.price }}</span>
                 </div>
-                <h3>{{ site.data.languages[page.lang].services.pedicure }}</h3>
-                <p>{{ site.data.languages[page.lang].services.pedicure_desc }}</p>
-                <span class="service-price">{{ site.data.languages[page.lang].prices.pedicure_price }}</span>
             </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-palette"></i>
-                </div>
-                <h3>{{ site.data.languages[page.lang].services.nail_art }}</h3>
-                <p>{{ site.data.languages[page.lang].services.nail_art_desc }}</p>
-                <span class="service-price">{{ site.data.languages[page.lang].prices.nail_art_price }}</span>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-gem"></i>
-                </div>
-                <h3>{{ site.data.languages[page.lang].services.gel_nails }}</h3>
-                <p>{{ site.data.languages[page.lang].services.gel_nails_desc }}</p>
-                <span class="service-price">{{ site.data.languages[page.lang].prices.gel_nails_price }}</span>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-leaf"></i>
-                </div>
-                <h3>{{ site.data.languages[page.lang].services.spa_treatment }}</h3>
-                <p>{{ site.data.languages[page.lang].services.spa_treatment_desc }}</p>
-                <span class="service-price">{{ site.data.languages[page.lang].prices.spa_price }}</span>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
+
 <!-- Gallery Section -->
-<section id="gallery" class="section">
+<section id="gallery" class="section dark-section">
     <div class="container">
         <h2 class="section-title">{{ site.data.languages[page.lang].gallery.title }}</h2>
         <p class="gallery-subtitle">{{ site.data.languages[page.lang].gallery.subtitle }}</p>
@@ -93,8 +64,7 @@
                 <img src="/assets/images/sample1.png" alt="Nail Design 1">
                 <div class="gallery-overlay">
                     <div class="gallery-info">
-                        <h4>French Manicure</h4>
-                        <p>Classic & Elegant</p>
+                       
                     </div>
                 </div>
             </div>
@@ -104,8 +74,7 @@
                 <img src="/assets/images/sample2.png" alt="Nail Design 2">
                 <div class="gallery-overlay">
                     <div class="gallery-info">
-                        <h4>Sparkle Nails</h4>
-                        <p>Festive Design</p>
+                       
                     </div>
                 </div>
             </div>
@@ -156,49 +125,13 @@
         </div>
         
         <div class="gallery-cta">
-            <a href="#contact" class="btn btn-secondary">
+            <a target="_blank" href="https://booksy.com/pl-pl/326169_prestige-nails-by-olga_paznokcie_8820_krakow?do=invite&_branch_match_id=1533504878332540859&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVNwr2NjYOcTFyj0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAHQcDOw6AAAA" class="btn btn-secondary">
                 <i class="fas fa-camera"></i> {{ site.data.languages[page.lang].gallery.view_all }}
             </a>
         </div>
     </div>
 </section>
-<!-- Prices Section -->
-<section id="prices" class="section dark-section">
-    <div class="container">
-        <h2 class="section-title">{{ site.data.languages[page.lang].prices.title }}</h2>
-        <div class="prices-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>{{ site.data.languages[page.lang].services.manicure }}</th>
-                        <th>{{ site.data.languages[page.lang].prices.manicure_price }}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{{ site.data.languages[page.lang].services.pedicure }}</td>
-                        <td>{{ site.data.languages[page.lang].prices.pedicure_price }}</td>
-                    </tr>
-                    <tr>
-                        <td>{{ site.data.languages[page.lang].services.nail_art }} ({% if page.lang == 'pl' %}Podstawowy{% elsif page.lang == 'uk' %}Базовий{% elsif page.lang == 'ru' %}Базовый{% elsif page.lang == 'tr' %}Temel{% else %}Basic{% endif %})</td>
-                        <td>{{ site.data.languages[page.lang].prices.nail_art_price }}</td>
-                    </tr>
-                    <tr>
-                        <td>{{ site.data.languages[page.lang].services.gel_nails }} ({{ site.data.languages[page.lang].prices.full_set }})</td>
-                        <td>{{ site.data.languages[page.lang].prices.gel_nails_price }}</td>
-                    </tr>
-                    <tr>
-                        <td>{{ site.data.languages[page.lang].services.spa_treatment }}</td>
-                        <td>{{ site.data.languages[page.lang].prices.spa_price }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="price-note">
-            <p><i class="fas fa-info-circle"></i> {{ site.data.languages[page.lang].contact.appointment_info }}</p>
-        </div>
-    </div>
-</section>
+
 
 <!-- About Section -->
 <section id="about" class="section">
@@ -227,7 +160,7 @@
                 </div>
             </div>
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1607779097042-1c4d47f8286b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Salon Interior">
+                <img src="/assets/images/place.png" alt="Salon Interior">
             </div>
         </div>
     </div>
@@ -243,7 +176,7 @@
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
                         <h4>{{ site.data.languages[page.lang].contact.address_title }}</h4>
-                        <p>{{ site.salon.address }}</p>
+                        <p>Długa,18, Bajola Studio, 31-147, Krakow, City Center</p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -265,7 +198,7 @@
             <div class="appointment-box">
                 <h3><i class="fas fa-calendar-check"></i> {{ site.data.languages[page.lang].contact.appointment_title }}</h3>
                 <p>{{ site.data.languages[page.lang].contact.appointment_info }}</p>
-                <a href="tel:{{ site.salon.phone }}" class="btn btn-primary btn-large">
+                <a target="_blank" href="https://booksy.com/pl-pl/326169_prestige-nails-by-olga_paznokcie_8820_krakow?do=invite&_branch_match_id=1533504878332540859&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVNwr2NjYOcTFyj0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAHQcDOw6AAAA" class="btn btn-primary btn-large">
                     <i class="fas fa-phone"></i> {{ site.data.languages[page.lang].contact.call_now }}
                 </a>
                 <div class="emergency-note">

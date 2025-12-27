@@ -1,5 +1,3 @@
-# Complete language file with all translations
-
 # ENGLISH
 en:
   # Navigation
@@ -15,43 +13,120 @@ en:
   # Hero Section
   hero:
     welcome: "Welcome to"
-    title: "Prestige Nails"
-    subtitle: "Your Nails, Your Story!"
-    description: "Experience premium nail services in a relaxing atmosphere. Our skilled technicians provide meticulous care using the highest quality products."
+    title: "Prestige Nails by Olga"
+    subtitle: "Professional Nail Care & Beauty"
+    slogan: "Your Nails, Your Story!"
+    description: "Experience premium nail services in a relaxing atmosphere. Our skilled technician provides meticulous care using the highest quality products."
     call_to_action: "Book Appointment"
     call_phone: "Call Now"
   
-  # Services
+  # Services - ALL FROM BOOKSY
   services:
     title: "Our Services"
-    manicure: "Manicure"
-    manicure_desc: "Basic nail care, shaping, and cuticle treatment"
-    pedicure: "Pedicure"
-    pedicure_desc: "Foot care and nail treatment"
-    nail_art: "Nail Art"
-    nail_art_desc: "Creative designs and decorations"
-    gel_nails: "Gel Nails"
-    gel_nails_desc: "Long-lasting gel extensions"
-    spa_treatment: "Spa Treatment"
-    spa_treatment_desc: "Relaxing hand and foot spa"
+    # Service list as array for easy looping
+    list:
+      - name: "Hybrid Manicure with Color"
+        description: "Long-lasting color and shine"
+        price: "140 PLN"
+        time: "40 min"
+        duration_minutes: 40
+      - name: "Gel Refill (up to 3 weeks)"
+        description: "Maintain your perfect nails"
+        price: "180 PLN"
+        time: "15 min"
+        duration_minutes: 15
+      - name: "Hybrid Pedicure with Milling"
+        description: "Professional foot care with milling machine"
+        price: "160 PLN"
+        time: "30 min"
+        duration_minutes: 30
+      - name: "Gel on Natural Nail"
+        description: "Strength and natural look"
+        price: "160 PLN"
+        time: "10 min"
+        duration_minutes: 10
+      - name: "Classic Manicure with Nourishment"
+        description: "Basic care and nourishment"
+        price: "90 PLN"
+        time: "60 min"
+        duration_minutes: 60
+      - name: "Nail Extensions with Gel"
+        description: "Create your desired length"
+        price: "200 PLN+"
+        time: "40 min"
+        duration_minutes: 40
+      - name: "Men's Manicure"
+        description: "Classic manicure for men"
+        price: "90 PLN"
+        time: "60 min"
+        duration_minutes: 60
+      - name: "French/Decorations"
+        description: "French manicure or nail decorations"
+        price: "20 PLN"
+        time: "30 min"
+        duration_minutes: 30
+      - name: "Hybrid Removal (with service)"
+        description: "Removal of hybrid/gel with service"
+        price: "20 PLN"
+        time: "30 min"
+        duration_minutes: 30
+      - name: "Classic Pedicure with Nourishment"
+        description: "Basic foot care with nourishment"
+        price: "110 PLN"
+        time: "80 min"
+        duration_minutes: 80
+      - name: "Classic Pedicure with Regular Polish"
+        description: "Foot care with regular polish"
+        price: "120 PLN"
+        time: "90 min"
+        duration_minutes: 90
+      - name: "Hybrid Pedicure"
+        description: "Long-lasting pedicure"
+        price: "140 PLN"
+        time: "70 min"
+        duration_minutes: 70
+      - name: "Hybrid/Gel Nail Repair"
+        description: "Repair of hybrid or gel nail"
+        price: "20 PLN"
+        time: "30 min"
+        duration_minutes: 30
+      - name: "Nail Reconstruction up to 7 days"
+        description: "Nail reconstruction service"
+        price: "FREE"
+        time: "30 min"
+        duration_minutes: 30
+      - name: "Hybrid Manicure + Hybrid Pedicure"
+        description: "Combined hand and foot care"
+        price: "250 PLN"
+        time: "110 min"
+        duration_minutes: 110
+      - name: "Classic Manicure + SPA"
+        description: "Manicure with spa treatment"
+        price: "110 PLN"
+        time: "60 min"
+        duration_minutes: 60
+      - name: "Hybrid/Gel Removal"
+        description: "Removal service only"
+        price: "45 PLN+"
+        time: "30 min"
+        duration_minutes: 30
+      - name: "Hybrid Manicure - 3 Services"
+        description: "Package of 3 hybrid manicures"
+        price: "370 PLN"
+        time: "200 min"
+        duration_minutes: 200
   
   # Gallery
   gallery:
     title: "Our Gallery"
     subtitle: "See Our Beautiful Work"
     view_all: "View All Photos"
+    see_more: "See More of Our Work"
   
-  # Prices
+  # Prices section (optional - can use services instead)
   prices:
     title: "Price List (PLN)"
-    manicure_price: "from 60 PLN"
-    pedicure_price: "from 80 PLN"
-    nail_art_price: "from 30 PLN"
-    gel_nails_price: "from 120 PLN"
-    spa_price: "from 100 PLN"
-    full_set: "Full Set"
-    refill: "Refill"
-    removal: "Removal"
+    note: "* Duration is approximate. Visit Booksy for full price list and booking."
   
   # About
   about:
@@ -65,8 +140,8 @@ en:
     hours_title: "Working Hours"
     phone_title: "Phone"
     appointment_title: "Appointments"
-    appointment_info: "Appointments by phone only"
-    call_now: "Call to Book"
+    appointment_info: "Appointments by phone or through Booksy"
+    call_now: "Book Now on Booksy"
     same_day: "Same-day appointments available"
   
   # Footer
@@ -79,11 +154,7 @@ en:
     made_with: "Made with"
     heart: "love"
     for: "for our clients"
-    contact_us: "Contact Us"
-    address: "Address"
-    phone: "Phone"
-    email: "Email"
-    Developer: VaMo
+    developed_by: "Developed by"
 
 # POLISH
 pl:
@@ -100,43 +171,119 @@ pl:
   # Hero Section
   hero:
     welcome: "Witamy w"
-    title: "Prestige Nails"
-    subtitle: "Twoje Paznokcie, Twoja Historia!"
-    description: "Doświadcz premium usług paznokci w relaksującej atmosferze. Nasi wykwalifikowani technicy zapewniają staranną opiekę przy użyciu najwyższej jakości produktów."
+    title: "Prestige Nails by Olga"
+    subtitle: "Profesjonalna Pielęgnacja Paznokci"
+    slogan: "Twoje Paznokcie, Twoja Historia!"
+    description: "Doświadcz premium usług paznokci w relaksującej atmosferze. Nasz wykwalifikowany technik zapewnia staranną opiekę przy użyciu najwyższej jakości produktów."
     call_to_action: "Umów Wizytę"
     call_phone: "Zadzwoń Teraz"
   
-  # Services
+  # Services - ALL FROM BOOKSY IN POLISH
   services:
     title: "Nasze Usługi"
-    manicure: "Manicure"
-    manicure_desc: "Podstawowa pielęgnacja, kształtowanie i pielęgnacja skórek"
-    pedicure: "Pedicure"
-    pedicure_desc: "Pielęgnacja stóp i paznokci"
-    nail_art: "Nail Art"
-    nail_art_desc: "Kreatywne wzory i dekoracje"
-    gel_nails: "Żelowe Paznokcie"
-    gel_nails_desc: "Trwałe przedłużenia żelowe"
-    spa_treatment: "Zabieg Spa"
-    spa_treatment_desc: "Relaksujące spa dłoni i stóp"
+    list:
+      - name: "Manicure hybrydowy z kolorem"
+        description: "Trwały kolor i połysk"
+        price: "140 zł"
+        time: "40 min"
+        duration_minutes: 40
+      - name: "Uzupełnienie żelowe do 3 tygodni"
+        description: "Utrzymaj perfekcyjne paznokcie"
+        price: "180 zł"
+        time: "15 min"
+        duration_minutes: 15
+      - name: "Pedicure hybrydowy+frezarkowy"
+        description: "Profesjonalna pielęgnacja stóp z frezarką"
+        price: "160 zł"
+        time: "30 min"
+        duration_minutes: 30
+      - name: "Żel na naturalnej płytce"
+        description: "Wytrzymałość i naturalny wygląd"
+        price: "160 zł"
+        time: "10 min"
+        duration_minutes: 10
+      - name: "Manicure klasyczny z odżywką"
+        description: "Podstawowa pielęgnacja i odżywienie"
+        price: "90 zł"
+        time: "60 min"
+        duration_minutes: 60
+      - name: "Przedłużanie paznokci żelem"
+        description: "Stwórz pożądaną długość"
+        price: "200 zł+"
+        time: "40 min"
+        duration_minutes: 40
+      - name: "Manicure męski"
+        description: "Klasyczny manicure dla mężczyzn"
+        price: "90 zł"
+        time: "60 min"
+        duration_minutes: 60
+      - name: "Frencz/zdobienia"
+        description: "Frencz lub dekoracje paznokci"
+        price: "20 zł"
+        time: "30 min"
+        duration_minutes: 30
+      - name: "Ściągnięcie hybrydy przy usłudze"
+        description: "Ściągnięcie hybrydy/żelu z usługą"
+        price: "20 zł"
+        time: "30 min"
+        duration_minutes: 30
+      - name: "Pedicure klasyczny z odżywką"
+        description: "Podstawowa pielęgnacja stóp z odżywką"
+        price: "110 zł"
+        time: "80 min"
+        duration_minutes: 80
+      - name: "Pedicure klasyczny z malowaniem zwykłym lakierem"
+        description: "Pielęgnacja stóp ze zwykłym lakierem"
+        price: "120 zł"
+        time: "90 min"
+        duration_minutes: 90
+      - name: "Pedicure hybrydowy"
+        description: "Trwały pedicure"
+        price: "140 zł"
+        time: "70 min"
+        duration_minutes: 70
+      - name: "Naprawa paznokcia hybrydowego/żelowego"
+        description: "Naprawa paznokcia hybrydowego lub żelowego"
+        price: "20 zł"
+        time: "30 min"
+        duration_minutes: 30
+      - name: "Rekonstrukcja paznokcia do 7 dni"
+        description: "Usługa rekonstrukcji paznokcia"
+        price: "DARMOWA"
+        time: "30 min"
+        duration_minutes: 30
+      - name: "Manicure hybrydowy+pedicure hybrydowy"
+        description: "Połączona pielęgnacja dłoni i stóp"
+        price: "250 zł"
+        time: "110 min"
+        duration_minutes: 110
+      - name: "Manicure klasyczny+SPA"
+        description: "Manicure z zabiegiem spa"
+        price: "110 zł"
+        time: "60 min"
+        duration_minutes: 60
+      - name: "Ściągnięcie hybrydy/żelu"
+        description: "Usługa tylko ściągnięcia"
+        price: "45 zł+"
+        time: "30 min"
+        duration_minutes: 30
+      - name: "Manicure hybrydowy-3 usługi"
+        description: "Pakiet 3 manicure hybrydowych"
+        price: "370 zł"
+        time: "200 min"
+        duration_minutes: 200
   
   # Gallery
   gallery:
     title: "Nasza Galeria"
     subtitle: "Zobacz Nasze Piękne Prace"
     view_all: "Zobacz Wszystkie Zdjęcia"
+    see_more: "Zobacz Więcej Naszych Prac"
   
   # Prices
   prices:
     title: "Cennik (PLN)"
-    manicure_price: "od 60 PLN"
-    pedicure_price: "od 80 PLN"
-    nail_art_price: "od 30 PLN"
-    gel_nails_price: "od 120 PLN"
-    spa_price: "od 100 PLN"
-    full_set: "Pełny zestaw"
-    refill: "Uzupełnienie"
-    removal: "Usunięcie"
+    note: "* Czas jest przybliżony. Odwiedź Booksy po pełny cennik i rezerwację."
   
   # About
   about:
@@ -150,8 +297,8 @@ pl:
     hours_title: "Godziny Otwarcia"
     phone_title: "Telefon"
     appointment_title: "Rezerwacje"
-    appointment_info: "Rezerwacja tylko telefonicznie"
-    call_now: "Zadzwoń, aby zarezerwować"
+    appointment_info: "Rezerwacja telefonicznie lub przez Booksy"
+    call_now: "Zarezerwuj na Booksy"
     same_day: "Rezerwacje w dniu wizyty dostępne"
   
   # Footer
@@ -164,13 +311,9 @@ pl:
     made_with: "Stworzone z"
     heart: "miłością"
     for: "dla naszych klientów"
-    contact_us: "Skontaktuj się z nami"
-    address: "Adres"
-    phone: "Telefon"
-    email: "Email"
-    Developer: VaMo
+    developed_by: "Stworzone przez"
 
-# UKRAINIAN
+# UKRAINIAN (ук)
 uk:
   # Navigation
   nav:
@@ -185,43 +328,119 @@ uk:
   # Hero Section
   hero:
     welcome: "Ласкаво просимо до"
-    title: "Prestige Nails"
-    subtitle: "Ваші Нігті, Ваша Історія!"
-    description: "Отримайте преміум послуги з манікюру в затишній атмосфері. Наші досвідчені техніки надають ретельний догляд з використанням найякісніших продуктів."
+    title: "Prestige Nails by Olga"
+    subtitle: "Професійний догляд за нігтями"
+    slogan: "Ваші Нігті, Ваша Історія!"
+    description: "Отримайте преміум послуги манікюру в затишній атмосфері. Наш досвідчений технік забезпечує ретельний догляд з використанням найякісніших продуктів."
     call_to_action: "Записатися"
     call_phone: "Зателефонувати"
   
-  # Services
+  # Services - ALL FROM BOOKSY IN UKRAINIAN
   services:
     title: "Наші Послуги"
-    manicure: "Манікюр"
-    manicure_desc: "Базовий догляд за нігтями, форма та обробка кутикули"
-    pedicure: "Педикюр"
-    pedicure_desc: "Догляд за ступнями та нігтями"
-    nail_art: "Нейл-арт"
-    nail_art_desc: "Креативні дизайни та прикраси"
-    gel_nails: "Гелеві Нігті"
-    gel_nails_desc: "Довготривалі гелеві нарощення"
-    spa_treatment: "Спа-процедури"
-    spa_treatment_desc: "Розслаблюючі спа для рук і ніг"
+    list:
+      - name: "Гібридний манікюр з кольором"
+        description: "Довготривалий колір та блиск"
+        price: "140 PLN"
+        time: "40 хв"
+        duration_minutes: 40
+      - name: "Гелеве заповнення до 3 тижнів"
+        description: "Підтримуйте ідеальні нігті"
+        price: "180 PLN"
+        time: "15 хв"
+        duration_minutes: 15
+      - name: "Гібридний педикюр+фрезерування"
+        description: "Професійний догляд за ступнями з фрезером"
+        price: "160 PLN"
+        time: "30 хв"
+        duration_minutes: 30
+      - name: "Гель на натуральній платівці"
+        description: "Міцність та природний вигляд"
+        price: "160 PLN"
+        time: "10 хв"
+        duration_minutes: 10
+      - name: "Класичний манікюр з поживним кремом"
+        description: "Базовий догляд та живлення"
+        price: "90 PLN"
+        time: "60 хв"
+        duration_minutes: 60
+      - name: "Подовження нігтів гелем"
+        description: "Створіть бажану довжину"
+        price: "200 PLN+"
+        time: "40 хв"
+        duration_minutes: 40
+      - name: "Чоловічий манікюр"
+        description: "Класичний манікюр для чоловіків"
+        price: "90 PLN"
+        time: "60 хв"
+        duration_minutes: 60
+      - name: "Френч/декорації"
+        description: "Френч або декорування нігтів"
+        price: "20 PLN"
+        time: "30 хв"
+        duration_minutes: 30
+      - name: "Зняття гібриду з послугою"
+        description: "Зняття гібриду/гелю з послугою"
+        price: "20 PLN"
+        time: "30 хв"
+        duration_minutes: 30
+      - name: "Класичний педикюр з поживним кремом"
+        description: "Базовий догляд за ступнями з живленням"
+        price: "110 PLN"
+        time: "80 хв"
+        duration_minutes: 80
+      - name: "Класичний педикюр зі звичайним лаком"
+        description: "Догляд за ступнями зі звичайним лаком"
+        price: "120 PLN"
+        time: "90 хв"
+        duration_minutes: 90
+      - name: "Гібридний педикюр"
+        description: "Довготривалий педикюр"
+        price: "140 PLN"
+        time: "70 хв"
+        duration_minutes: 70
+      - name: "Ремонт гібридного/гелевого нігтя"
+        description: "Ремонт гібридного або гелевого нігтя"
+        price: "20 PLN"
+        time: "30 хв"
+        duration_minutes: 30
+      - name: "Реконструкція нігтя до 7 днів"
+        description: "Послуга реконструкції нігтя"
+        price: "БЕЗКОШТОВНО"
+        time: "30 хв"
+        duration_minutes: 30
+      - name: "Гібридний манікюр+гібридний педикюр"
+        description: "Комбінований догляд за руками та ногами"
+        price: "250 PLN"
+        time: "110 хв"
+        duration_minutes: 110
+      - name: "Класичний манікюр+SPA"
+        description: "Манікюр з спа процедурою"
+        price: "110 PLN"
+        time: "60 хв"
+        duration_minutes: 60
+      - name: "Зняття гібриду/гелю"
+        description: "Послуга тільки зняття"
+        price: "45 PLN+"
+        time: "30 хв"
+        duration_minutes: 30
+      - name: "Гібридний манікюр - 3 послуги"
+        description: "Пакет з 3 гібридних манікюрів"
+        price: "370 PLN"
+        time: "200 хв"
+        duration_minutes: 200
   
   # Gallery
   gallery:
     title: "Наша Галерея"
     subtitle: "Подивіться на наші красиві роботи"
     view_all: "Переглянути всі фото"
+    see_more: "Дивитися більше наших робіт"
   
   # Prices
   prices:
     title: "Прайс-лист (PLN)"
-    manicure_price: "від 60 PLN"
-    pedicure_price: "від 80 PLN"
-    nail_art_price: "від 30 PLN"
-    gel_nails_price: "від 120 PLN"
-    spa_price: "від 100 PLN"
-    full_set: "Повний набір"
-    refill: "Корекція"
-    removal: "Зняття"
+    note: "* Час наближений. Відвідайте Booksy для повного прайсу та бронювання."
   
   # About
   about:
@@ -235,8 +454,8 @@ uk:
     hours_title: "Години Роботи"
     phone_title: "Телефон"
     appointment_title: "Запис"
-    appointment_info: "Запис тільки за телефоном"
-    call_now: "Зателефонувати для запису"
+    appointment_info: "Запис по телефону або через Booksy"
+    call_now: "Забронювати на Booksy"
     same_day: "Прийом в той же день доступний"
   
   # Footer
@@ -249,13 +468,9 @@ uk:
     made_with: "Зроблено з"
     heart: "любов'ю"
     for: "для наших клієнтів"
-    contact_us: "Зв'яжіться з нами"
-    address: "Адреса"
-    phone: "Телефон"
-    email: "Електронна пошта"
-    Developer: VaMo
+    developed_by: "Розроблено"
 
-# RUSSIAN
+# RUSSIAN (ru)
 ru:
   # Navigation
   nav:
@@ -270,43 +485,119 @@ ru:
   # Hero Section
   hero:
     welcome: "Добро пожаловать в"
-    title: "Prestige Nails"
-    subtitle: "Ваши Ногти, Ваша История!"
-    description: "Получите премиум услуги маникюра в уютной атмосфере. Наши опытные техники обеспечивают тщательный уход с использованием продуктов высшего качества."
+    title: "Prestige Nails by Olga"
+    subtitle: "Профессиональный уход за ногтями"
+    slogan: "Ваши Ногти, Ваша История!"
+    description: "Получите премиум услуги маникюра в уютной атмосфере. Наш опытный техник обеспечивает тщательный уход с использованием продуктов высшего качества."
     call_to_action: "Записаться"
     call_phone: "Позвонить"
   
-  # Services
+  # Services - ALL FROM BOOKSY IN RUSSIAN
   services:
     title: "Наши Услуги"
-    manicure: "Маникюр"
-    manicure_desc: "Базовый уход за ногтями, форма и обработка кутикулы"
-    pedicure: "Педикюр"
-    pedicure_desc: "Уход за стопами и ногтями"
-    nail_art: "Нейл-арт"
-    nail_art_desc: "Креативные дизайны и украшения"
-    gel_nails: "Гелевые Ногти"
-    gel_nails_desc: "Долговременные гелевые наращивания"
-    spa_treatment: "Спа-процедуры"
-    spa_treatment_desc: "Расслабляющие спа для рук и ног"
+    list:
+      - name: "Гибридный маникюр с цветом"
+        description: "Долговременный цвет и блеск"
+        price: "140 PLN"
+        time: "40 мин"
+        duration_minutes: 40
+      - name: "Гелевое заполнение до 3 недель"
+        description: "Поддерживайте идеальные ногти"
+        price: "180 PLN"
+        time: "15 мин"
+        duration_minutes: 15
+      - name: "Гибридный педикюр+фрезеровка"
+        description: "Профессиональный уход за стопами с фрезером"
+        price: "160 PLN"
+        time: "30 мин"
+        duration_minutes: 30
+      - name: "Гель на натуральной пластине"
+        description: "Прочность и естественный вид"
+        price: "160 PLN"
+        time: "10 мин"
+        duration_minutes: 10
+      - name: "Классический маникюр с питательным кремом"
+        description: "Базовый уход и питание"
+        price: "90 PLN"
+        time: "60 мин"
+        duration_minutes: 60
+      - name: "Удлинение ногтей гелем"
+        description: "Создайте желаемую длину"
+        price: "200 PLN+"
+        time: "40 мин"
+        duration_minutes: 40
+      - name: "Мужской маникюр"
+        description: "Классический маникюр для мужчин"
+        price: "90 PLN"
+        time: "60 мин"
+        duration_minutes: 60
+      - name: "Френч/декорации"
+        description: "Френч или декорирование ногтей"
+        price: "20 PLN"
+        time: "30 мин"
+        duration_minutes: 30
+      - name: "Снятие гибрида с услугой"
+        description: "Снятие гибрида/геля с услугой"
+        price: "20 PLN"
+        time: "30 мин"
+        duration_minutes: 30
+      - name: "Классический педикюр с питательным кремом"
+        description: "Базовый уход за стопами с питанием"
+        price: "110 PLN"
+        time: "80 мин"
+        duration_minutes: 80
+      - name: "Классический педикюр с обычным лаком"
+        description: "Уход за стопами с обычным лаком"
+        price: "120 PLN"
+        time: "90 мин"
+        duration_minutes: 90
+      - name: "Гибридный педикюр"
+        description: "Долговременный педикюр"
+        price: "140 PLN"
+        time: "70 мин"
+        duration_minutes: 70
+      - name: "Ремонт гибридного/гелевого ногтя"
+        description: "Ремонт гибридного или гелевого ногтя"
+        price: "20 PLN"
+        time: "30 мин"
+        duration_minutes: 30
+      - name: "Реконструкция ногтя до 7 дней"
+        description: "Услуга реконструкции ногтя"
+        price: "БЕСПЛАТНО"
+        time: "30 мин"
+        duration_minutes: 30
+      - name: "Гибридный маникюр+гибридный педикюр"
+        description: "Комбинированный уход за руками и ногами"
+        price: "250 PLN"
+        time: "110 мин"
+        duration_minutes: 110
+      - name: "Классический маникюр+SPA"
+        description: "Маникюр с спа процедурой"
+        price: "110 PLN"
+        time: "60 мин"
+        duration_minutes: 60
+      - name: "Снятие гибрида/геля"
+        description: "Услуга только снятия"
+        price: "45 PLN+"
+        time: "30 мин"
+        duration_minutes: 30
+      - name: "Гибридный маникюр - 3 услуги"
+        description: "Пакет из 3 гибридных маникюров"
+        price: "370 PLN"
+        time: "200 мин"
+        duration_minutes: 200
   
   # Gallery
   gallery:
     title: "Наша Галерея"
     subtitle: "Посмотрите наши красивые работы"
     view_all: "Посмотреть все фото"
+    see_more: "Смотреть больше наших работ"
   
   # Prices
   prices:
     title: "Прайс-лист (PLN)"
-    manicure_price: "от 60 PLN"
-    pedicure_price: "от 80 PLN"
-    nail_art_price: "от 30 PLN"
-    gel_nails_price: "от 120 PLN"
-    spa_price: "от 100 PLN"
-    full_set: "Полный набор"
-    refill: "Коррекция"
-    removal: "Снятие"
+    note: "* Время приблизительное. Посетите Booksy для полного прайса и бронирования."
   
   # About
   about:
@@ -320,8 +611,8 @@ ru:
     hours_title: "Часы Работы"
     phone_title: "Телефон"
     appointment_title: "Запись"
-    appointment_info: "Запись только по телефону"
-    call_now: "Позвонить для записи"
+    appointment_info: "Запись по телефону или через Booksy"
+    call_now: "Забронировать на Booksy"
     same_day: "Прием в тот же день доступен"
   
   # Footer
@@ -334,13 +625,9 @@ ru:
     made_with: "Сделано с"
     heart: "любовью"
     for: "для наших клиентов"
-    contact_us: "Свяжитесь с нами"
-    address: "Адрес"
-    phone: "Телефон"
-    email: "Электронная почта"
-    Developer: VaMo
+    developed_by: "Разработано"
 
-# TURKISH
+# TURKISH (tr)
 tr:
   # Navigation
   nav:
@@ -355,43 +642,119 @@ tr:
   # Hero Section
   hero:
     welcome: "Hoş Geldiniz"
-    title: "Prestige Nails"
-    subtitle: "Tırnaklarınız, Hikayeniz!"
-    description: "Rahatlatıcı bir atmosferde premium tırnak hizmetlerinin keyfini çıkarın. Uzman teknisyenlerimiz, en yüksek kalitede ürünler kullanarak titiz bir bakım sağlar."
+    title: "Prestige Nails by Olga"
+    subtitle: "Profesyonel Tırnak Bakımı"
+    slogan: "Tırnaklarınız, Hikayeniz!"
+    description: "Rahatlatıcı bir atmosferde premium tırnak hizmetlerinin keyfini çıkarın. Uzman teknisyenimiz, en yüksek kalitede ürünler kullanarak titiz bir bakım sağlar."
     call_to_action: "Randevu Al"
     call_phone: "Hemen Ara"
   
-  # Services
+  # Services - ALL FROM BOOKSY IN TURKISH
   services:
     title: "Hizmetlerimiz"
-    manicure: "Manikür"
-    manicure_desc: "Temel tırnak bakımı, şekillendirme ve kutikül tedavisi"
-    pedicure: "Pedicure"
-    pedicure_desc: "Ayak bakımı ve tırnak tedavisi"
-    nail_art: "Tırnak Sanatı"
-    nail_art_desc: "Yaratıcı tasarımlar ve süslemeler"
-    gel_nails: "Jel Tırnaklar"
-    gel_nails_desc: "Uzun ömürlü jel uzantılar"
-    spa_treatment: "Spa Tedavisi"
-    spa_treatment_desc: "Rahatlatıcı el ve ayak spa'ı"
+    list:
+      - name: "Renkli Hibrit Manikür"
+        description: "Uzun ömürlü renk ve parlaklık"
+        price: "140 PLN"
+        time: "40 dk"
+        duration_minutes: 40
+      - name: "3 Haftaya Kadar Jel Dolgu"
+        description: "Mükemmel tırnaklarınızı koruyun"
+        price: "180 PLN"
+        time: "15 dk"
+        duration_minutes: 15
+      - name: "Hibrit Pedikür+Frezeleme"
+        description: "Freze makinesi ile profesyonel ayak bakımı"
+        price: "160 PLN"
+        time: "30 dk"
+        duration_minutes: 30
+      - name: "Doğal Tırnakta Jel"
+        description: "Dayanıklılık ve doğal görünüm"
+        price: "160 PLN"
+        time: "10 dk"
+        duration_minutes: 10
+      - name: "Besleyici Kremli Klasik Manikür"
+        description: "Temel bakım ve beslenme"
+        price: "90 PLN"
+        time: "60 dk"
+        duration_minutes: 60
+      - name: "Jel ile Tırnak Uzatma"
+        description: "İstediğiniz uzunluğu oluşturun"
+        price: "200 PLN+"
+        time: "40 dk"
+        duration_minutes: 40
+      - name: "Erkek Manikürü"
+        description: "Erkekler için klasik manikür"
+        price: "90 PLN"
+        time: "60 dk"
+        duration_minutes: 60
+      - name: "Frenş/Süslemeler"
+        description: "Frenş veya tırnak dekorasyonları"
+        price: "20 PLN"
+        time: "30 dk"
+        duration_minutes: 30
+      - name: "Hizmetle Hibrit Çıkarma"
+        description: "Hizmetle hibrit/jel çıkarma"
+        price: "20 PLN"
+        time: "30 dk"
+        duration_minutes: 30
+      - name: "Besleyici Kremli Klasik Pedikür"
+        description: "Beslenme ile temel ayak bakımı"
+        price: "110 PLN"
+        time: "80 dk"
+        duration_minutes: 80
+      - name: "Normal Oje ile Klasik Pedikür"
+        description: "Normal oje ile ayak bakımı"
+        price: "120 PLN"
+        time: "90 dk"
+        duration_minutes: 90
+      - name: "Hibrit Pedikür"
+        description: "Uzun ömürlü pedikür"
+        price: "140 PLN"
+        time: "70 dk"
+        duration_minutes: 70
+      - name: "Hibrit/Jel Tırnak Onarımı"
+        description: "Hibrit veya jel tırnağın onarımı"
+        price: "20 PLN"
+        time: "30 dk"
+        duration_minutes: 30
+      - name: "7 Güne Kadar Tırnak Rekonstrüksiyonu"
+        description: "Tırnak rekonstrüksiyon hizmeti"
+        price: "ÜCRETSİZ"
+        time: "30 dk"
+        duration_minutes: 30
+      - name: "Hibrit Manikür+Hibrit Pedikür"
+        description: "Birleştirilmiş el ve ayak bakımı"
+        price: "250 PLN"
+        time: "110 dk"
+        duration_minutes: 110
+      - name: "Klasik Manikür+SPA"
+        description: "Spa tedavili manikür"
+        price: "110 PLN"
+        time: "60 dk"
+        duration_minutes: 60
+      - name: "Hibrit/Jel Çıkarma"
+        description: "Sadece çıkarma hizmeti"
+        price: "45 PLN+"
+        time: "30 dk"
+        duration_minutes: 30
+      - name: "Hibrit Manikür - 3 Hizmet"
+        description: "3 hibrit manikür paketi"
+        price: "370 PLN"
+        time: "200 dk"
+        duration_minutes: 200
   
   # Gallery
   gallery:
     title: "Galerimiz"
     subtitle: "Güzel Çalışmalarımızı Görün"
     view_all: "Tüm Fotoğrafları Gör"
+    see_more: "Daha Fazla Çalışmamızı Görün"
   
   # Prices
   prices:
     title: "Fiyat Listesi (PLN)"
-    manicure_price: "60 PLN'den başlayan"
-    pedicure_price: "80 PLN'den başlayan"
-    nail_art_price: "30 PLN'den başlayan"
-    gel_nails_price: "120 PLN'den başlayan"
-    spa_price: "100 PLN'den başlayan"
-    full_set: "Tam Set"
-    refill: "Dolgu"
-    removal: "Çıkarma"
+    note: "* Süre yaklaşıktır. Tam fiyat listesi ve rezervasyon için Booksy'yi ziyaret edin."
   
   # About
   about:
@@ -405,8 +768,8 @@ tr:
     hours_title: "Çalışma Saatleri"
     phone_title: "Telefon"
     appointment_title: "Randevular"
-    appointment_info: "Randevular sadece telefonla"
-    call_now: "Randevu için Ara"
+    appointment_info: "Telefonla veya Booksy üzerinden randevu"
+    call_now: "Booksy'de Rezervasyon Yap"
     same_day: "Aynı gün randevular mevcut"
   
   # Footer
@@ -419,8 +782,4 @@ tr:
     made_with: "Sevgiyle yapıldı"
     heart: "aşk"
     for: "müşterilerimiz için"
-    contact_us: "Bize Ulaşın"
-    address: "Adres"
-    phone: "Telefon"
-    email: "E-posta"
-    Developer: VaMo
+    developed_by: "Geliştiren"
