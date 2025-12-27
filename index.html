@@ -1,0 +1,217 @@
+---
+layout: default
+title: Home
+lang: en
+---
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h4 class="greeting">{{ site.data.languages[page.lang].hero.welcome }}</h4>
+                <h1 class="salon-name">{{ site.data.languages[page.lang].hero.title }}</h1>
+                <h2 class="salon-tagline">{{ site.data.languages[page.lang].hero.subtitle }}</h2>
+                <p class="description">{{ site.data.languages[page.lang].hero.description }}</p>
+                <div class="hero-buttons">
+                    <a href="tel:{{ site.salon.phone }}" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> {{ site.data.languages[page.lang].hero.call_to_action }}
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        <i class="fas fa-spa"></i> {{ site.data.languages[page.lang].nav.services }}
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="owner-profile">
+                    <img src="{{ '/assets/images/profile1.png' | relative_url }}" alt="Salon Owner" class="owner-img">
+                    <div class="owner-badge">
+                        <i class="fas fa-crown"></i>
+                        <span>{% if page.lang == 'pl' %}Właściciel & Mistrz Manicure{% elsif page.lang == 'uk' %}Власник & Майстер манікюру{% elsif page.lang == 'ru' %}Владелец & Мастер маникюра{% elsif page.lang == 'tr' %}Sahip & Usta Tırnak Teknisyeni{% else %}Owner & Master Nail Technician{% endif %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<!-- Updated Services Section with YAML array -->
+<section id="services" class="services-section">
+    <div class="container">
+        <h2 class="section-title">{{ site.data.languages[page.lang].services.title }}</h2>
+        
+        <div class="services-compact">
+            {% for service in site.data.languages[page.lang].services.list %}
+            <div class="service-item-compact">
+                <div class="service-header-compact">
+                    <h3>{{ service.name }}</h3>
+                    <span class="service-duration">{{ service.time }}</span>
+                </div>
+                <p class="service-desc">{{ service.description }}</p>
+                <div class="service-footer">
+                    <span class="service-price">{{ service.price }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="section dark-section">
+    <div class="container">
+        <h2 class="section-title">{{ site.data.languages[page.lang].gallery.title }}</h2>
+        <p class="gallery-subtitle">{{ site.data.languages[page.lang].gallery.subtitle }}</p>
+        
+        <div class="gallery-grid">
+            <!-- Image 1 -->
+            <div class="gallery-item">
+                <img src="/assets/images/sample1.png" alt="Nail Design 1">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                       
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 2 -->
+            <div class="gallery-item">
+                <img src="/assets/images/sample2.png" alt="Nail Design 2">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                       
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 3 -->
+            <div class="gallery-item">
+                <img src="/assets/images/sample3.png" alt="Nail Design 3">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h4>Gel Extensions</h4>
+                        <p>Long & Strong</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 4 -->
+            <div class="gallery-item">
+                <img src="/assets/images/sample4.png" alt="Nail Design 4">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h4>Nail Art</h4>
+                        <p>Creative Designs</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 5 -->
+            <div class="gallery-item">
+                <img src="/assets/images/sample5.png" alt="Nail Design 5">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h4>Bridal Nails</h4>
+                        <p>Wedding Special</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 6 -->
+            <div class="gallery-item">
+                <img src="/assets/images/sample6.png" alt="Nail Design 6">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h4>Seasonal Colors</h4>
+                        <p>Trendy Shades</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gallery-cta">
+            <a target="_blank" href="https://booksy.com/pl-pl/326169_prestige-nails-by-olga_paznokcie_8820_krakow?do=invite&_branch_match_id=1533504878332540859&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVNwr2NjYOcTFyj0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAHQcDOw6AAAA" class="btn btn-secondary">
+                <i class="fas fa-camera"></i> {{ site.data.languages[page.lang].gallery.view_all }}
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- About Section -->
+<section id="about" class="section">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2 class="section-title">{{ site.data.languages[page.lang].about.title }}</h2>
+                <p>{{ site.data.languages[page.lang].about.content }}</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>{% if page.lang == 'pl' %}Produkty Premium Quality{% elsif page.lang == 'uk' %}Преміум якості продукти{% elsif page.lang == 'ru' %}Продукты Премиум качества{% elsif page.lang == 'tr' %}Premium Kalite Ürünler{% else %}Premium Quality Products{% endif %}</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>{% if page.lang == 'pl' %}Sterylizowany Sprzęt{% elsif page.lang == 'uk' %}Стерилізоване обладнання{% elsif page.lang == 'ru' %}Стерилизованное оборудование{% elsif page.lang == 'tr' %}Sterilize Ekipmanlar{% else %}Sterilized Equipment{% endif %}</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>{% if page.lang == 'pl' %}Doświadczeni Technicy{% elsif page.lang == 'uk' %}Досвідчені техніки{% elsif page.lang == 'ru' %}Опытные техники{% elsif page.lang == 'tr' %}Deneyimli Teknisyenler{% else %}Experienced Technicians{% endif %}</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>{% if page.lang == 'pl' %}Certyfikat Higieny{% elsif page.lang == 'uk' %}Сертифікат гігієни{% elsif page.lang == 'ru' %}Сертификат гигиены{% elsif page.lang == 'tr' %}Hijyen Sertifikalı{% else %}Hygiene Certified{% endif %}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="/assets/images/place.png" alt="Salon Interior">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section dark-section">
+    <div class="container">
+        <h2 class="section-title">{{ site.data.languages[page.lang].contact.title }}</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>{{ site.data.languages[page.lang].contact.address_title }}</h4>
+                        <p>Długa,18, Bajola Studio, 31-147, Krakow, City Center</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>{{ site.data.languages[page.lang].contact.hours_title }}</h4>
+                        <p>{{ site.salon.working_hours }}</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>{{ site.data.languages[page.lang].contact.phone_title }}</h4>
+                        <p>{{ site.salon.phone }}</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="appointment-box">
+                <h3><i class="fas fa-calendar-check"></i> {{ site.data.languages[page.lang].contact.appointment_title }}</h3>
+                <p>{{ site.data.languages[page.lang].contact.appointment_info }}</p>
+                <a target="_blank" href="https://booksy.com/pl-pl/326169_prestige-nails-by-olga_paznokcie_8820_krakow?do=invite&_branch_match_id=1533504878332540859&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVNwr2NjYOcTFyj0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAHQcDOw6AAAA" class="btn btn-primary btn-large">
+                    <i class="fas fa-phone"></i> {{ site.data.languages[page.lang].contact.call_now }}
+                </a>
+                <div class="emergency-note">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>{% if page.lang == 'pl' %}Wizyty w tym samym dniu dostępne{% elsif page.lang == 'uk' %}Прийом в той же день доступний{% elsif page.lang == 'ru' %}Прием в тот же день доступен{% elsif page.lang == 'tr' %}Aynı gün randevular mevcut{% else %}Same-day appointments available{% endif %}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
