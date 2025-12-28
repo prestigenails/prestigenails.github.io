@@ -5,17 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | {{ site.title }}</title>
     
-    <!-- Fonts & Icons -->
+    <!-- Language detection script -->
+    <script>
+        // Function to detect user's country based on IP
+        function detectUserCountry() {
+            // Try to get from localStorage first
+            const savedLang = localStorage.getItem('preferred-language');
+            if (savedLang) {
+                return savedLang;
+            }
+            
+            // Get from browser language
+            const browserLang = navigator.language || navigator.userLanguage;
+            
+            // Map browser language to our supported languages
+            const languageMap = {
+                'pl': 'pl', 'pl-PL': 'pl', 'pl-pl': 'pl',
+                'en': 'en', 'en-US': 'en', 'en-GB': 'en', 'en-us': 'en', 'en-gb': 'en',
+                'uk': 'uk', 'uk-UA': 'uk', 'uk-ua': 'uk',
+                'ru': 'ru', 'ru-RU': 'ru', 'ru-ru': 'ru',
+                'tr': 'tr', 'tr-TR': 'tr', 'tr-tr': 'tr'
+            };
+            
+            // Check if browser language is supported
+            const langCode = languageMap[browserLang];
+            if (langCode && langCode !== '{{ page.lang }}') {
+                return langCode;
+            }
+            
+            return null;
+        }
+        
+        // Function to redirect to appropriate language
+        function redirectToLanguage(lang) {
+            // Don't redirect if already on correct language
+            if (lang === '{{ page.lang }}' || (lang === 'pl' && window.location.pathname === '/')) {
+                return;
+            }
+            
+            // Map language codes to paths
+            const langPaths = {
+                'pl': '/',
+                'en': '/en/',
+                'uk': '/uk/',
+                'ru': '/ru/',
+                'tr': '/tr/'
+            };
+            
+            const path = langPaths[lang];
+            if (path && window.location.pathname !== path) {
+                window.location.href = path;
+            }
+        }
+        
+        // Run detection on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const detectedLang = detectUserCountry();
+            if (detectedLang) {
+                redirectToLanguage(detectedLang);
+            }
+        });
+    </script>
+    
+    <!-- Rest of your head content -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
-    
-    {% include head.html %}
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
 </head>
 <body>
     {% include header.html %}

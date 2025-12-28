@@ -5,17 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ana Sayfa | Prestige Nails Salon</title>
     
-    <!-- Fonts & Icons -->
+    <!-- Language detection script -->
+    <script>
+        // Function to detect user's country based on IP
+        function detectUserCountry() {
+            // Try to get from localStorage first
+            const savedLang = localStorage.getItem('preferred-language');
+            if (savedLang) {
+                return savedLang;
+            }
+            
+            // Get from browser language
+            const browserLang = navigator.language || navigator.userLanguage;
+            
+            // Map browser language to our supported languages
+            const languageMap = {
+                'pl': 'pl', 'pl-PL': 'pl', 'pl-pl': 'pl',
+                'en': 'en', 'en-US': 'en', 'en-GB': 'en', 'en-us': 'en', 'en-gb': 'en',
+                'uk': 'uk', 'uk-UA': 'uk', 'uk-ua': 'uk',
+                'ru': 'ru', 'ru-RU': 'ru', 'ru-ru': 'ru',
+                'tr': 'tr', 'tr-TR': 'tr', 'tr-tr': 'tr'
+            };
+            
+            // Check if browser language is supported
+            const langCode = languageMap[browserLang];
+            if (langCode && langCode !== 'tr') {
+                return langCode;
+            }
+            
+            return null;
+        }
+        
+        // Function to redirect to appropriate language
+        function redirectToLanguage(lang) {
+            // Don't redirect if already on correct language
+            if (lang === 'tr' || (lang === 'pl' && window.location.pathname === '/')) {
+                return;
+            }
+            
+            // Map language codes to paths
+            const langPaths = {
+                'pl': '/',
+                'en': '/en/',
+                'uk': '/uk/',
+                'ru': '/ru/',
+                'tr': '/tr/'
+            };
+            
+            const path = langPaths[lang];
+            if (path && window.location.pathname !== path) {
+                window.location.href = path;
+            }
+        }
+        
+        // Run detection on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const detectedLang = detectUserCountry();
+            if (detectedLang) {
+                redirectToLanguage(detectedLang);
+            }
+        });
+    </script>
+    
+    <!-- Rest of your head content -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
-    
-    
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 </head>
 <body>
     <!-- _includes/header.html - Complete with YAML navigation and language dropdown -->
@@ -579,18 +635,6 @@
                         <p>+48 571 851 417</p>
                     </div>
                 </div>
-               
-
-<div class="contact-item">
-    <a href="https://wa.me/48571851417?text=" 
-       class="whatsapp-button" 
-       target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <span></span>
-    </a>
-</div>
-
-
             </div>
             
             <div class="appointment-box">
@@ -598,6 +642,9 @@
                 <p>Telefonla veya Booksy üzerinden randevu</p>
                 <a target="_blank" href="https://booksy.com/pl-pl/326169_prestige-nails-by-olga_paznokcie_8820_krakow?do=invite&_branch_match_id=1533504878332540859&utm_medium=profile_share_from_profile&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVNwr2NjYOcTFyj0yyrytKTUstKsrMS49PKsovL04tsnVNSU8FAHQcDOw6AAAA" class="btn btn-primary btn-large">
                     <i class="fas fa-phone"></i> Booksy'de Rezervasyon Yap
+                </a>
+                 <a target="_blank" href="https://wa.me/+48571851417?text=Cześć!+Chciałabym+umówić+się+na+manicure.+Proszę+o+dostępne+terminy." class="btn btn-primary btn-large btn-whatApp">
+                    <i class="fab fa-whatsapp"></i> +48 571 851 417
                 </a>
                 <div class="emergency-note">
                     <i class="fas fa-exclamation-circle"></i>

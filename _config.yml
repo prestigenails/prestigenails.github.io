@@ -33,7 +33,7 @@ languages:
   - code: "tr"
     name: "Türkçe"
     flag: "/assets/flags/tr.svg"
-default_lang: "en"
+default_lang: "pl" 
 
 # Navigation from YAML - with icons
 navigation:
