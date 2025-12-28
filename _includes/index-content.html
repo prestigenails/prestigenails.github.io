@@ -193,6 +193,18 @@
                         <p>{{ site.salon.phone }}</p>
                     </div>
                 </div>
+               
+
+<div class="contact-item">
+    <a href="https://wa.me/{{ site.salon.phone | remove: '+' | remove: ' ' | remove: '-' }}?text={{ site.data.languages[page.lang].whatsapp_message }}" 
+       class="whatsapp-button" 
+       target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>{{ site.data.languages[page.lang].contact.whatsapp_title }}</span>
+    </a>
+</div>
+
+
             </div>
             
             <div class="appointment-box">

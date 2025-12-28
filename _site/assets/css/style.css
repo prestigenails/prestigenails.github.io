@@ -522,6 +522,12 @@ h1, h2, h3, h4, h5, .logo {
     color: white;
 }
 
+.btn-whatApp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    margin-top: 15px;
+}
+
 .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(231, 84, 128, 0.3);
@@ -1772,3 +1778,5 @@ body.dark-theme .github-link {
 .services-note-simple i {
     color: var(--dark-pink);
 }
+
+
