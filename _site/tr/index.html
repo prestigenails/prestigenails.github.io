@@ -5,45 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ana Sayfa | Prestige Nails Salon</title>
     
-    <!-- Language detection script -->
+    <!-- Language detection - ONLY ON HOMEPAGE -->
     <script>
-        // Function to detect user's country based on IP
-        function detectUserCountry() {
-            // Try to get from localStorage first
-            const savedLang = localStorage.getItem('preferred-language');
-            if (savedLang) {
-                return savedLang;
-            }
-            
-            // Get from browser language
-            const browserLang = navigator.language || navigator.userLanguage;
-            
-            // Map browser language to our supported languages
-            const languageMap = {
-                'pl': 'pl', 'pl-PL': 'pl', 'pl-pl': 'pl',
-                'en': 'en', 'en-US': 'en', 'en-GB': 'en', 'en-us': 'en', 'en-gb': 'en',
-                'uk': 'uk', 'uk-UA': 'uk', 'uk-ua': 'uk',
-                'ru': 'ru', 'ru-RU': 'ru', 'ru-ru': 'ru',
-                'tr': 'tr', 'tr-TR': 'tr', 'tr-tr': 'tr'
-            };
-            
-            // Check if browser language is supported
-            const langCode = languageMap[browserLang];
-            if (langCode && langCode !== 'tr') {
-                return langCode;
-            }
-            
-            return null;
+        // Only run language detection on the homepage/root
+        function shouldRunDetection() {
+            const path = window.location.pathname;
+            // Only run on: /, /index.html, or when no language prefix
+            return path === '/' || 
+                   path === '/index.html' || 
+                   path === '' ||
+                   !path.startsWith('/en/') && 
+                   !path.startsWith('/pl/') && 
+                   !path.startsWith('/uk/') && 
+                   !path.startsWith('/ru/') && 
+                   !path.startsWith('/tr/');
         }
         
-        // Function to redirect to appropriate language
-        function redirectToLanguage(lang) {
-            // Don't redirect if already on correct language
-            if (lang === 'tr' || (lang === 'pl' && window.location.pathname === '/')) {
-                return;
-            }
+        if (shouldRunDetection()) {
+            document.addEventListener('DOMContentLoaded', function() {
+                // Function to detect user's country based on IP
+                function detectUserCountry() {
+                    // Try to get from localStorage first
+                    const savedLang = localStorage.getItem('preferred-language');
+                    if (savedLang) {
+                        return savedLang;
+                    }
+                    
+                    // Get from browser language
+                    const browserLang = navigator.language || navigator.userLanguage;
+                    
+                    // Map browser language to our supported languages
+                    const languageMap = {
+                        'pl': 'pl', 'pl-PL': 'pl', 'pl-pl': 'pl',
+                        'en': 'en', 'en-US': 'en', 'en-GB': 'en', 'en-us': 'en', 'en-gb': 'en',
+                        'uk': 'uk', 'uk-UA': 'uk', 'uk-ua': 'uk',
+                        'ru': 'ru', 'ru-RU': 'ru', 'ru-ru': 'ru',
+                        'tr': 'tr', 'tr-TR': 'tr', 'tr-tr': 'tr'
+                    };
+                    
+                    // Check if browser language is supported
+                    const langCode = languageMap[browserLang];
+                    if (langCode) {
+                        return langCode;
+                    }
+                    
+                    return null;
+                }
+                
+                // Function to redirect to appropriate language
+                function redirectToLanguage(lang) {
+                    // Map language codes to paths
+                    const langPaths = {
+                        'pl': '/',
+                        'en': '/en/',
+                        'uk': '/uk/',
+                        'ru': '/ru/',
+                        'tr': '/tr/'
+                    };
+                    
+                    const path = langPaths[lang];
+                    if (path && window.location.pathname !== path) {
+                        // Small delay for better UX
+                        setTimeout(() => {
+                            window.location.href = path;
+                        }, 100);
+                    }
+                }
+                
+                const detectedLang = detectUserCountry();
+                if (detectedLang) {
+                    redirectToLanguage(detectedLang);
+                }
+            });
+        }
+        
+        // Function to manually change language (for language switcher)
+        window.changeLanguage = function(lang) {
+            localStorage.setItem('preferred-language', lang);
             
-            // Map language codes to paths
             const langPaths = {
                 'pl': '/',
                 'en': '/en/',
@@ -53,18 +92,10 @@
             };
             
             const path = langPaths[lang];
-            if (path && window.location.pathname !== path) {
+            if (path) {
                 window.location.href = path;
             }
-        }
-        
-        // Run detection on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            const detectedLang = detectUserCountry();
-            if (detectedLang) {
-                redirectToLanguage(detectedLang);
-            }
-        });
+        };
     </script>
     
     <!-- Rest of your head content -->
@@ -506,7 +537,6 @@
                 <img src="/assets/images/sample1.png" alt="Nail Design 1">
                 <div class="gallery-overlay">
                     <div class="gallery-info">
-                       
                     </div>
                 </div>
             </div>
@@ -516,7 +546,6 @@
                 <img src="/assets/images/sample2.png" alt="Nail Design 2">
                 <div class="gallery-overlay">
                     <div class="gallery-info">
-                       
                     </div>
                 </div>
             </div>
@@ -526,8 +555,6 @@
                 <img src="/assets/images/sample3.png" alt="Nail Design 3">
                 <div class="gallery-overlay">
                     <div class="gallery-info">
-                        <h4>Gel Extensions</h4>
-                        <p>Long & Strong</p>
                     </div>
                 </div>
             </div>
@@ -537,8 +564,6 @@
                 <img src="/assets/images/sample4.png" alt="Nail Design 4">
                 <div class="gallery-overlay">
                     <div class="gallery-info">
-                        <h4>Nail Art</h4>
-                        <p>Creative Designs</p>
                     </div>
                 </div>
             </div>
@@ -548,8 +573,6 @@
                 <img src="/assets/images/sample5.png" alt="Nail Design 5">
                 <div class="gallery-overlay">
                     <div class="gallery-info">
-                        <h4>Bridal Nails</h4>
-                        <p>Wedding Special</p>
                     </div>
                 </div>
             </div>
@@ -559,8 +582,6 @@
                 <img src="/assets/images/sample6.png" alt="Nail Design 6">
                 <div class="gallery-overlay">
                     <div class="gallery-info">
-                        <h4>Seasonal Colors</h4>
-                        <p>Trendy Shades</p>
                     </div>
                 </div>
             </div>
