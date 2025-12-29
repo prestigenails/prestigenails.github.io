@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vahidmoeinifar.github.io/sitemap.xml
+Sitemap: https://prestigenails.github.io/sitemap.xml
